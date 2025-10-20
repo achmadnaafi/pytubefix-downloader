@@ -142,7 +142,7 @@ Jika Anda ingin menambahkan fitur (mis. integrasi GUI, better error handling, pr
 
 ---
 
-✍️ **Dibuat oleh:** Achmad Nurnaafi
-📜 **Lisensi:** Gratis untuk digunakan, bukan untuk diperjualbelikan.
-🙏 Mohon digunakan dengan bijak dan tidak untuk pelanggaran hak cipta.
-📩 **Hubungi:** [Instagram @achmad.naafi_](https://instagram.com/achmad.naafi_) jika ingin bertanya lebih lanjut atau memberikan masukan.
+* ✍️ **Dibuat oleh:** Achmad Nurnaafi
+* 📜 **Lisensi:** Gratis untuk digunakan, bukan untuk diperjualbelikan.
+* 🙏 Mohon digunakan dengan bijak dan tidak untuk pelanggaran hak cipta.
+* 📩 **Hubungi:** [🅾 @achmad.naafi_](https://instagram.com/achmad.naafi_) jika ingin bertanya lebih lanjut atau memberikan masukan.
