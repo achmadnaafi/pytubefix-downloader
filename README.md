@@ -1,12 +1,14 @@
+# pytubefix-downloader
+
 **Nama repository :** `pytubefix-downloader`
 
-**Deskripsi singkat:** Skrip Python sederhana untuk mengunduh video/audio YouTube menggunakan `pytubefix` dan (opsional) menggabungkan stream video adaptif dengan audio menggunakan `ffmpeg`.
+**Deskripsi singkat:** Skrip Notebook Python (`.ipynb`) sederhana untuk mengunduh video/audio YouTube menggunakan `pytubefix` dan (opsional) menggabungkan stream video adaptif dengan audio menggunakan `ffmpeg`.
 
 ---
 
 ## Tentang Pembuat
 
-Script Python ini dibuat oleh **Achmad Nurnaafi** sebagai proyek pribadi dan open-source untuk berbagi dengan siapa pun yang membutuhkan alat sederhana untuk belajar dan eksperimen.
+Skrip Notebook Python ini dibuat oleh **Achmad Nurnaafi** sebagai proyek pribadi dan open-source untuk berbagi dengan siapa pun yang membutuhkan alat sederhana untuk belajar dan eksperimen.
 
 > ⚠️ **Disclaimer penggunaan:** Skrip ini hanya untuk tujuan **pendidikan dan penggunaan pribadi**. **Dilarang keras memperjualbelikan**, mendistribusikan ulang, atau menggunakan kode ini untuk **kepentingan komersial** maupun kegiatan yang **melanggar hukum**. Proyek ini **gratis** dan dimaksudkan untuk berbagi ilmu.
 
@@ -16,7 +18,7 @@ Script Python ini dibuat oleh **Achmad Nurnaafi** sebagai proyek pribadi dan ope
 
 ## Ringkasan
 
-Skrip ini membantu mengunduh stream MP4 dari YouTube (menggunakan pustaka `pytubefix`). Jika Anda memilih stream video adaptif (video tanpa audio), skrip akan mendownload audio terbaik terpisah lalu *menggabungkan* video + audio menggunakan `ffmpeg` untuk menghasilkan file final.
+Skrip ini membantu mengunduh stream MP4 dari YouTube (menggunakan pustaka `pytubefix`). Jika Anda memilih stream video adaptif (video tanpa audio), notebook akan mendownload audio terbaik terpisah lalu *menggabungkan* video + audio menggunakan `ffmpeg` untuk menghasilkan file final.
 
 ---
 
@@ -24,13 +26,13 @@ Skrip ini membantu mengunduh stream MP4 dari YouTube (menggunakan pustaka `pytub
 
 * Pilihan stream berdasarkan resolusi / audio bitrate
 * Mendukung stream **progressive** (video+audio) dan **adaptive** (video tanpa audio)
-* Ketika stream adaptive dipilih, skrip otomatis mengunduh audio terbaik dan menggabungkannya ke video menggunakan `ffmpeg`.
+* Ketika stream adaptive dipilih, notebook otomatis mengunduh audio terbaik dan menggabungkannya ke video menggunakan `ffmpeg`.
 
 ---
 
 ## Persiapan (environment)
 
-1. Pastikan Anda menjalankan Python 3.8+
+1. Pastikan Anda menjalankan Python 3.8+ dengan Jupyter Notebook atau JupyterLab.
 2. Buat virtual environment (opsional tetapi direkomendasikan):
 
    ```bash
@@ -49,21 +51,22 @@ Skrip ini membantu mengunduh stream MP4 dari YouTube (menggunakan pustaka `pytub
    ```bash
    pip install -r requirements.txt
    ```
+4. Buka file notebook:
+
+   ```bash
+   jupyter notebook pytubefix-downloader.ipynb
+   ```
 
 ---
 
 ## Cara pakai
 
-1. Jalankan skrip Python:
-
-   ```bash
-   python downloader.py
-   ```
-2. Masukkan URL YouTube ketika diminta.
+1. Jalankan notebook sel per sel di Jupyter.
+2. Masukkan URL YouTube ketika diminta di cell input.
 3. Pilih nomor stream dari daftar yang tampil.
 4. Masukkan nama file output (tanpa ekstensi).
 
-Jika Anda memilih stream yang **adaptive** (video tanpa audio), skrip akan:
+Jika Anda memilih stream yang **adaptive** (video tanpa audio), notebook akan:
 
 * Mengunduh file video (tanpa audio) dan file audio terpisah,
 * Menggabungkannya menggunakan `ffmpeg` menjadi `<nama>_final.mp4`.
@@ -72,18 +75,18 @@ Jika Anda memilih stream yang **adaptive** (video tanpa audio), skrip akan:
 
 ## Menginstall & Mengatur `ffmpeg`
 
-Skrip menggunakan `ffmpeg` untuk menggabungkan stream video dan audio. Ada dua cara mengatur `ffmpeg` supaya skrip bekerja:
+Notebook menggunakan `ffmpeg` untuk menggabungkan stream video dan audio. Ada dua cara mengatur `ffmpeg` supaya berjalan lancar:
 
 ### Opsi A — Pasang `ffmpeg` dan tambahkan ke `PATH` (direkomendasikan)
 
 1. Download build `ffmpeg` untuk sistem operasi Anda (mis. dari [https://www.gyan.dev/ffmpeg/builds/](https://www.gyan.dev/ffmpeg/builds/) untuk Windows atau paket manajer untuk macOS/Linux).
 2. Ekstrak dan letakkan folder bin `ffmpeg` di lokasi yang aman.
 3. Tambahkan folder yang berisi `ffmpeg.exe` (Windows) atau `ffmpeg` (macOS/Linux) ke environment variable `PATH`.
-4. Setelah itu Anda cukup memanggil `ffmpeg` tanpa path absolut di skrip. Contoh `cmd` pada skrip menjadi: `"ffmpeg"` atau hanya `ffmpeg`.
+4. Setelah itu Anda cukup memanggil `ffmpeg` tanpa path absolut di kode. Contoh `cmd` pada kode menjadi: `"ffmpeg"` atau hanya `ffmpeg`.
 
-### Opsi B — Gunakan path absolut (sesuaikan skrip)
+### Opsi B — Gunakan path absolut (sesuaikan di kode)
 
-Jika Anda tidak ingin atau tidak bisa menambahkan `ffmpeg` ke PATH, edit skrip Anda dan ubah baris `cmd` yang memanggil `ffmpeg` menjadi path lengkap ke `ffmpeg.exe` di komputer Anda. Contoh (Windows):
+Jika Anda tidak ingin atau tidak bisa menambahkan `ffmpeg` ke PATH, ubah baris `cmd` pada kode menjadi path lengkap ke `ffmpeg.exe` di komputer Anda. Contoh (Windows):
 
 ```python
 cmd = [
@@ -120,7 +123,7 @@ cmd = [
 
 * Mengunduh konten yang dilindungi hak cipta tanpa izin pemegang hak biasanya melanggar hukum hak cipta dan/atau Term of Service platform.
 * Pastikan Anda memahami lisensi konten sebelum menyimpan atau mendistribusikannya.
-* Bila skrip ini disalahgunakan, penulis/kontributor repository tidak bertanggung jawab.
+* Bila notebook ini disalahgunakan, penulis/kontributor repository tidak bertanggung jawab.
 
 ---
 
@@ -150,3 +153,4 @@ Jika Anda ingin menambahkan fitur (mis. integrasi GUI, better error handling, pr
 ✍️ **Dibuat oleh:** Achmad Nurnaafi
 📜 **Lisensi:** Gratis untuk digunakan, bukan untuk diperjualbelikan.
 🙏 Mohon digunakan dengan bijak dan tidak untuk pelanggaran hak cipta.
+📩 **Hubungi:** [Instagram @achmad.naafi_](https://instagram.com/achmad.naafi_) jika ingin bertanya lebih lanjut atau memberikan masukan.
