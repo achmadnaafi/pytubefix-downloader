@@ -1,0 +1,30 @@
+### .gitignore
+
+```
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual environment
+venv/
+env/
+
+# Downloaded video/audio files
+*.mp4
+*.m4a
+
+# System files
+.DS_Store
+Thumbs.db
+```
+
+---
+
+### requirements.txt
+
+```
+pytubefix
+```
