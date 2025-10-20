@@ -127,12 +127,6 @@ cmd = [
 
 ---
 
-## Lisensi
-
-Repository ini disarankan menggunakan **MIT License** (atau lisensi lain yang Anda pilih). Sertakan file `LICENSE` jika Anda ingin membagikan proyek dengan syarat tertentu.
-
----
-
 ## Kontribusi
 
 Jika Anda ingin menambahkan fitur (mis. integrasi GUI, better error handling, progress bar `ffmpeg`, dukungan format lain), buka issue atau pull request. Harap sertakan deskripsi yang jelas tentang tujuan perubahan.
