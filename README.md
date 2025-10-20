@@ -1,7 +1,5 @@
 # pytubefix-downloader
 
-**Nama repository :** `pytubefix-downloader`
-
 **Deskripsi singkat:** Skrip Notebook Python (`.ipynb`) sederhana untuk mengunduh video/audio YouTube menggunakan `pytubefix` dan (opsional) menggabungkan stream video adaptif dengan audio menggunakan `ffmpeg`.
 
 ---
